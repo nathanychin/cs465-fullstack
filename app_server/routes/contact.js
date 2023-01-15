@@ -1,6 +1,6 @@
 const express = require('express')
-const router = require('router')
-const controller = require('./controller/contact')
+const router = express.Router()
+const controller = require('../controllers/contact')
 
 // GET contact
 router.get('/', controller.contact)

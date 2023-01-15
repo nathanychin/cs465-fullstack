@@ -1,6 +1,6 @@
 const express = require('express')
-const router = require('router')
-const controller = require('./controller/about')
+const router = express.Router()
+const controller = require('../controllers/about')
 
 // GET about
 router.get('/', controller.about)

@@ -3,6 +3,7 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const hbs = require('hbs')
 
 const indexRouter = require('./app_server/routes/index');
 const usersRouter = require('./app_server/routes/users');
@@ -12,7 +13,6 @@ const mealsRouter = require('./app_server/routes/meals');
 const newsRouter = require('./app_server/routes/news');
 const aboutRouter = require('./app_server/routes/about');
 const roomsRouter = require('./app_server/routes/rooms');
-const usersRouter = require('./app_server/routes/users');
 
 const app = express();
 
@@ -20,7 +20,7 @@ const app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
-//Register handlebars
+// register handledbars partials (https://www.npmjs.com/package/hbs)
 hbs.registerPartials(path.join(__dirname, 'app_server', 'views/partials'))
 
 app.set('view engine', 'hbs')

@@ -1,6 +1,6 @@
 const express = require('express')
-const router = require('router')
-const controller = require('./controller/travel')
+const router = express.Router()
+const controller = require('../controllers/travel')
 
 // GET homepage
 router.get('/', controller.travel)
