@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Trip = mongoose.model('trip');
+const Trip = mongoose.model('trips');
 const User = mongoose.model('user');
 
 
@@ -12,7 +12,7 @@ const getUser = (req, res, callback) => {
           if (!user) {
             return res
               .status(404)
-              .json({"message": "User not found"});
+              .json({"message": "Test 1"});
           } else if (err) {
             console.log(err);
             return res
@@ -24,7 +24,7 @@ const getUser = (req, res, callback) => {
     } else {
       return res
         .status(404)
-        .json({"message": "User not found"});
+        .json({"message": "Test 2"});
     }
 };
 
